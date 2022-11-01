@@ -14,15 +14,22 @@ AccountBook.prototype.assignId = function() {
     return this.currentId;
 }
 
+    // AccountBook.prototype.setBalance = function (initialDeposit) {
+    //     this.balance = initialDeposit;
+    //     return this.balance;
+    // }
 
 // Business Logic for BankAccount
-
-function BankAccount(accountName, initialDeposit) {
+function BankAccount(accountName, balance) {
     this.accountName = accountName;
-    this.initialDeposit = initialDeposit;
+    this.balance = balance;
 }
 
 
+BankAccount.prototype.deposit = function (amount) {
+    this.balance += amount;
+    return parseInt(this.balance);
+}
 
 
 

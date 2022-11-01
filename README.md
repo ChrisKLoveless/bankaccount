@@ -36,3 +36,13 @@ Describe: AccountBook.prototype.assignID = function() {
 Test: "It shoudl add 1 to the current Id every time"
 Code: newBook.assignId();
 Expected Output: newBook.assignId(1);
+
+Describe: deposit(amount)
+Test: "It should add to the account balance"
+Code: BankAccount.prototype.deposit = function (amount) {
+    this.balance += amount;
+    return parseInt(this.balance);
+}
+test {name: test, balance:5}
+Expected Output: ;
+                   number;

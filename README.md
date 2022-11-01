@@ -8,16 +8,18 @@ Code:  function BankAccount(accountName, initialDeposit) {
 Expected Output: test;
                   BankAccount{accountName: "Yoonis" initialDeposit: "5000000"};
 
-Describe: 
-Test:
-Code:
-Expected Output:
+Describe: function AccountBook();
+Test: "It should store bank accounts inside the object"
+Code: function AccountBook() {
+        this.accounts = {};
+        }
+Expected Output: null
 
-Describe: 
-Test:
-Code:
-Expected Output:
-
+Describe: AccountBook.prototype.addAccount(account);
+Test: "It should add accounts to the AccountBook"
+Code: newBook.addAccount(account);
+Expected Output: newBook;
+                    newBook {account: test};
 Describe: 
 Test:
 Code:
